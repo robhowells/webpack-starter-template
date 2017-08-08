@@ -10,6 +10,7 @@ Simple starter project to test out Webpack.
 - File watching and copying
 - Server with livereload using Webpack Dev Server
 
-## [TODO]
+## TODO
 - Seperate development and production environments
 - Sass and JS linting
+- Minification

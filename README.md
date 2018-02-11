@@ -1,16 +1,15 @@
-# Webpack starter template
+# Webpack 3 starter template
 
-Simple starter project to test out Webpack. 
+Simple starter project to test out Webpack 3.
 
 ## Features
-- ES6 support using Babel
+- ES6 transpiling
 - JS module bundling
-- Sass compilation 
-- Seperate src and build directories
-- File watching and copying
-- Server with livereload using Webpack Dev Server
+- JS minification
+- Sass compilation
+- Development server with livereload
+- Automatic HTML file creation
+- Separate development and production environments
 
 ## TODO
-- Seperate development and production environments
 - Sass and JS linting
-- Minification

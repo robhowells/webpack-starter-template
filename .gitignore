@@ -52,7 +52,7 @@ Thumbs.db
 
 # Ignore the build directory #
 #####################
-#/build
+#/dist
 
 # Ignore Sass' cache #
 #####################

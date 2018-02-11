@@ -1,7 +1,5 @@
-import styles from './../sass/style.scss'
-import { MyModule } from './modules/myModule';
+import '../scss/style.scss';
 
-console.log('Index.js');
-
-var test = new MyModule();
-test.init();
+let name = 'Rob';
+const welcomeMessage = `Hello, ${name}`;
+console.log(welcomeMessage);

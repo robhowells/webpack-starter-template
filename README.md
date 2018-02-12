@@ -7,6 +7,7 @@ Simple starter project to test out Webpack 3.
 - JS module bundling
 - JS minification
 - JS source maps
+- React support
 - Sass compilation
 - Development server with livereload
 - Automatic HTML file creation

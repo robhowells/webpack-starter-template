@@ -3,18 +3,27 @@ import React from 'react';
 class ProfileCardStatus extends React.Component {
   constructor(props) {
     super(props);
-    this.handleToggle = this.handleToggle.bind(this);
+    this.state = {
+      status: 'Available'
+    }
+
+    this.toggleStatus = this.toggleStatus.bind(this);
   }
 
-  handleToggle(e) {
-    this.props.toggleStatus();
+  toggleStatus() {
+    this.setState(prevState => {
+      let newStatus = prevState.status == 'Available' ? 'Unavailable' : 'Available';
+      return {
+        status: newStatus
+      }
+    });
   }
 
   render() {
     return (
       <div className="profile-card__status">
-        <p className="profile-card__text">Status: <span data-status-text={this.props.status}>{this.props.status}</span></p>
-        <button onClick={this.handleToggle}>Toggle availability</button>
+        <p className="profile-card__text">Status: <span data-status-text={this.state.status}>{this.state.status}</span></p>
+        <button onClick={this.toggleStatus}>Toggle availability</button>
       </div>
     )
   }

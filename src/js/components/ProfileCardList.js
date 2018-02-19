@@ -1,12 +1,13 @@
 import React from 'react';
-import ProfileCard from './components/ProfileCard';
+import ProfileCard from './ProfileCardList/ProfileCard';
 
-class App extends React.Component {
+class ProfileCardList extends React.Component {
   constructor() {
     super();
     this.state = {
       profileCards: []
     }
+    this.deletePofileCard = this.deletePofileCard.bind(this);
   }
 
   getProfileData() {
@@ -28,16 +29,27 @@ class App extends React.Component {
     return `${name}-${index}`;
   }
 
+  deletePofileCard() {
+    this.setState((prevState) => {
+      return {
+        profileCards: prevState.profileCards.slice(1)
+      }
+    })
+  }
+
   render() {
     let cards = this.state.profileCards;
     return (
       <div>
         {cards.map((item, index) =>
-          <ProfileCard item={item} key={this.generateKey('profile-card', index)} />
+          <ProfileCard item={item}
+            key={this.generateKey('profile-card', index)}
+            deletePofileCard={this.deletePofileCard}
+          />
         )}
       </div>
     )
   }
 }
 
-export default App;
+export default ProfileCardList;

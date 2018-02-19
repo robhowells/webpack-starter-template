@@ -1,7 +1,8 @@
 import React from 'react';
-import ProfileCardImage from './ProfileCard/ProfileCardImage';
-import ProfileCardMeta from './ProfileCard/ProfileCardMeta';
-import ProfileCardStatus from './ProfileCard/ProfileCardStatus';
+import ProfileCardImage from './ProfileCardImage';
+import ProfileCardMeta from './ProfileCardMeta';
+import ProfileCardStatus from './ProfileCardStatus';
+import ProfileCardDelete from './ProfileCardDelete';
 
 const ProfileCard = (props) => {
   return (
@@ -13,7 +14,8 @@ const ProfileCard = (props) => {
         dateOfBirth={props.item.dob}
         city={props.item.location.city}
       />
-      <ProfileCardStatus/>
+      <ProfileCardStatus />
+      <ProfileCardDelete deletePofileCard={props.deletePofileCard}/>
       <hr/>
     </div>
   )

@@ -4,7 +4,7 @@ class ProfileCardStatus extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      status: 'Active'
+      status: 'Available'
     }
 
     this.toggleStatus = this.toggleStatus.bind(this);
@@ -12,7 +12,7 @@ class ProfileCardStatus extends React.Component {
 
   toggleStatus() {
     this.setState(prevState => {
-      let newStatus = prevState.status == 'Active' ? 'Inactive' : 'Active';
+      let newStatus = prevState.status == 'Available' ? 'Unavailable' : 'Available';
       return {
         status: newStatus
       }
@@ -22,7 +22,7 @@ class ProfileCardStatus extends React.Component {
   render() {
     return (
       <div className="profile-card__status">
-        <p className="profile-card__text">Status: <span data-status-text={this.state.status}>{this.state.status}</span></p>
+        <p className="profile-card__text">Status: <span>{this.state.status}</span></p>
         <button onClick={this.toggleStatus}>Toggle availability</button>
       </div>
     )

@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import ProfileCard from './components/ProfileCard';
+import App from './App';
 import '../scss/style.scss';
 
 ReactDOM.render(
-  <ProfileCard/>,
+  <App/>,
   document.getElementById('app')
 );

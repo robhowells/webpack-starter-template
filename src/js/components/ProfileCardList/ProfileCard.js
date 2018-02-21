@@ -1,5 +1,5 @@
 import React from 'react';
-import ProfileCardImage from './ProfileCardImage';
+
 import ProfileCardMeta from './ProfileCardMeta';
 import ProfileCardStatus from './ProfileCardStatus';
 import ProfileCardDelete from './ProfileCardDelete';
@@ -7,15 +7,15 @@ import ProfileCardDelete from './ProfileCardDelete';
 const ProfileCard = (props) => {
   return (
     <div className="profile-card">
-      <ProfileCardImage imageUrl={props.item.picture.medium} imageAlt={props.item.name.first}/>
       <ProfileCardMeta
-        firstName={props.item.name.first}
-        lastName={props.item.name.last}
-        dateOfBirth={props.item.dob}
-        city={props.item.location.city}
-      />
+        image={props.item.image}
+        name={props.item.name}
+        email={props.item.email}
+        phone={props.item.phone} />
       <ProfileCardStatus />
-      <ProfileCardDelete deletePofileCard={props.deletePofileCard}/>
+      <ProfileCardDelete
+        deletePofileCard={props.deletePofileCard}
+        id={props.item.id} />
       <hr/>
     </div>
   )

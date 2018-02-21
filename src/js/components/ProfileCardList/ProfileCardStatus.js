@@ -22,7 +22,7 @@ class ProfileCardStatus extends React.Component {
   render() {
     return (
       <div className="profile-card__status">
-        <p className="profile-card__text">Status: <span>{this.state.status}</span></p>
+        <p className="profile-card__text">Status: {this.state.status}</p>
         <button onClick={this.toggleStatus}>Toggle availability</button>
       </div>
     )

@@ -5,6 +5,6 @@ import ProfileCardList from './components/ProfileCardList';
 import '../scss/style.scss';
 
 ReactDOM.render(
-  <ProfileCardList/>,
+  <ProfileCardList />,
   document.getElementById('app')
 );
